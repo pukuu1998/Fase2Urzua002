@@ -32,8 +32,8 @@ class MovieStatus(models.Model):
 	release_date = models.DateField('ReleaseDate', null=True, blank=True)
 
 	LOAN_STATUS = (
-		('s', 'Soon'),
-		('a', 'Available'),
+		('p', 'Proximamente'),
+		('c', 'En Cartelera'),
 		('o', 'Out'),
 	)
 
@@ -41,7 +41,7 @@ class MovieStatus(models.Model):
 		max_length=1,
 		choices=LOAN_STATUS,
 		blank=True,
-		default='s',
+		default='p',
 		help_text='State of the movie',
 	)
 
